@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Sedgwick+Ave+Display&display=swap");
+.navbar {
+  font-family: "Inconsolata", monospace;
+  background-color: #f1f1f1;
+  -moz-box-shadow: 0 4px 4px rgba(73, 70, 70, 0.4);
+  -webkit-box-shadow: 0 4px 4px rgba(73, 70, 70, 0.4);
+  box-shadow: 0 4px 4px rgba(73, 70, 70, 0.4);
+  position: relative;
+  z-index: 3;
+  // overflow-x: hidden;
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.0959752321981426vh 0;
+    .navbar__logo {
+      font-family: "Sedgwick Ave Display", cursive;
+      font-size: 1.7857142857142858vw;
+      color: tomato;
+      text-shadow: 2px 0 #333, -2px 0 #333, 0 2px #333, 0 -2px #333,
+        1px 1px #333, -1px -1px #333, 1px -1px #333, -1px 1px #333;
+      cursor: pointer;
+    }
+    .list__group {
+      display: flex;
+      align-items: center;
+      .list__item:not(:last-child) {
+        margin-right: 0.8928571428571429vw;
+      }
+      .list__item {
+        .list__item_select {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          color: #333;
+          font-size: 1.0857142857142858vw;
+        }
+        .item__link {
+          color: #333;
+          padding: 1.5479876160990713vh 1.7857142857142858vw;
+          transition: all 0.3s ease;
+          font-size: 1.0857142857142858vw;
+          &:hover {
+            background-color: #333;
+            color: #fff;
+          }
+        }
+      }
+      .list__item_search {
+        position: relative;
+        .search__icon {
+          color: #333;
+          cursor: pointer;
+          font-size: 1.0857142857142858vw;
+        }
+        .search__form_input {
+          border: none;
+          border-bottom: 1px solid #333;
+          background-color: transparent;
+          outline: none;
+          position: absolute;
+          top: -42.598509052183175vh;
+          opacity: 0;
+          right: 0;
+          background-color: transparent;
+          padding: 1.5479876160990713vh 0.8928571428571429vw;
+          width: 26.785714285714285vw;
+          font-size: 1.2285714285714286vw;
+          transition: all 0.3s ease;
+          &::placeholder {
+            color: #333;
+          }
+        }
+        .input__show {
+          top: 6.287925696594428vh;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
